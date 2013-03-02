@@ -1,0 +1,17 @@
+
+Compilar classe model:
+
+javac -d classes -classpath D:\TI\Java\Servers\apache-tomcat-7.0.27\lib;classes;. 
+D:\TI\Java\Projetos\GitHub\beerV1\src\com\examples\model\ClasseModel.java
+
+
+Compilar classe Servlet:
+
+javac -d classes -classpath D:\TI\Java\Servers\apache-tomcat-7.0.27\lib;classes;. 
+D:\TI\Java\Projetos\GitHub\beerV1\src\com\examples\web\MeuServlet.java
+
+Iniciar Tomcat
+D:\TI\Java\Servers\apache-tomcat-7.0.27\bin\startup.bat
+
+Parar Tomcat
+D:\TI\Java\Servers\apache-tomcat-7.0.27\bin\shutdown.bat
