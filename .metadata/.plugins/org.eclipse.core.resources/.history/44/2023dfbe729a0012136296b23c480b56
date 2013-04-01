@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<project name="TesteAnt" default="main" basedir=".">
+	<echo message="Definindo properties..."/>
+
+	<property name="src.dir" location="src" />
+	<property name="build.dir" location="classes" />
+	<property name="lib.dir" location="D:\TI\Java\Servers\apache-tomcat-7.0.27\lib" />
+	<!-- war -->
+	<property name="filewar" value="Principal.war" />
+	<property name="war.dir" location="D:\TI\Java\Servers\apache-tomcat-7.0.27\webapps" />
+	<property name="war.subdir" location="D:\TI\Java\Servers\apache-tomcat-7.0.27\webapps\Principal" />
+	<property name="dist.dir" location="${war.dir}\WEB-INF\classes" />
+	
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete file="${war.dir}\${filewar}" />
+		<delete dir="${war.subdir}" />
+	</target>
+	
+	<target name="makedir">
+			<mkdir dir="${build.dir}" />
+	</target>
+		
+	<target name="compile" depends="clean, makedir">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" classpath="${lib.dir}\servlet-api.jar" ></javac>
+	</target> 
+	
+	<target name="war" depends="compile">
+		<war destfile="${war.dir}\${filewar}" webxml="etc\web.xml">
+			<fileset dir="." />
+			<!-- <lib dir="${lib.dir}" /> -->
+			<classes dir="${build.dir}" />
+		</war>
+	</target>
+	
+	<target name="main" depends="compile, war">
+		<description>Main target</description>
+	</target>
+	
+</project>

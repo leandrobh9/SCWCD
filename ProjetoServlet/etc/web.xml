@@ -5,10 +5,46 @@
 		<servlet-name>ServletPrincipal</servlet-name>
 		<servlet-class>main.Principal</servlet-class>
 	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>ServletPrincipal</servlet-name>
 		<url-pattern>/principal.do</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletParametros</servlet-name>
+		<servlet-class>main.ServletParametros</servlet-class>
+		
+		<init-param>
+			<param-name>nome</param-name>
+			<param-value>Leandro</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletParametros</servlet-name>
+		<url-pattern>/parametros.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletRequestDispatcher</servlet-name>
+		<servlet-class>main.UsandoRequest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletRequestDispatcher</servlet-name>
+		<url-pattern>/requestdispatcher.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletEncaminhada</servlet-name>
+		<servlet-class>main.ServletEncaminhada</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletEncaminhada</servlet-name>
+		<url-pattern>/outraurl.do</url-pattern>
+	</servlet-mapping>
+	
+	<context-param>
+		<param-name>cor</param-name>
+		<param-value>amarelo</param-value>
+	</context-param>
 </web-app>
 

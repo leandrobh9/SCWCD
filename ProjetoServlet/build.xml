@@ -28,7 +28,7 @@
 	
 	<target name="war" depends="compile">
 		<war destfile="${war.dir}\${filewar}" webxml="etc\web.xml">
-			<fileset dir="src" />
+			<fileset dir="web" />
 			<!-- <lib dir="${lib.dir}" /> -->
 			<classes dir="${build.dir}" />
 		</war>
