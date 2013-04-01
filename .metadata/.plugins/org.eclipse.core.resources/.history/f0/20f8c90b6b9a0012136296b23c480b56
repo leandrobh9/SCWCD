@@ -15,7 +15,6 @@
 	<target name="clean">
 		<delete dir="${build.dir}" />
 		<delete file="${war.dir}\${filewar}" />
-		<delete dir="${war.subdir}" />
 	</target>
 	
 	<target name="makedir">

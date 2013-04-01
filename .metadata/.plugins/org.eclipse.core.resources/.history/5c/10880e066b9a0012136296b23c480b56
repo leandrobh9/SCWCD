@@ -9,13 +9,11 @@
 	<!-- war -->
 	<property name="filewar" value="Principal.war" />
 	<property name="war.dir" location="D:\TI\Java\Servers\apache-tomcat-7.0.27\webapps" />
-	<property name="war.subdir" location="D:\TI\Java\Servers\apache-tomcat-7.0.27\webapps\Principal" />
 	<property name="dist.dir" location="${war.dir}\WEB-INF\classes" />
 	
 	<target name="clean">
 		<delete dir="${build.dir}" />
 		<delete file="${war.dir}\${filewar}" />
-		<delete dir="${war.subdir}" />
 	</target>
 	
 	<target name="makedir">

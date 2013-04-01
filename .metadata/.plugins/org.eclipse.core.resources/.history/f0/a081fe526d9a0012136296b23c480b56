@@ -19,7 +19,7 @@ public class Principal extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		out.println("Teste de conteudo");
-		out.println("i =  " + i++);
+		out.println("i =  " + i);
 		out.flush();
 	}
 	

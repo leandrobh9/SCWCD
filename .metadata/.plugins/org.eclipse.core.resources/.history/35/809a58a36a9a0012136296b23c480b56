@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Principal extends HttpServlet {
 
-	private int i = 0;
-	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -19,13 +17,12 @@ public class Principal extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		out.println("Teste de conteudo");
-		out.println("i =  " + i++);
 		out.flush();
 	}
 	
 	@Override
 	public void init() throws ServletException {
-		System.out.println("Teste do metodo init...");
+		System.out.println("Teste do metodo initi");
 	}
 	
 }
