@@ -1,0 +1,16 @@
+package cap4;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+/**
+ * Utilizacao de
+ * setContentType
+ * OutputStream
+ * @author Leandro
+ *
+ */
+public class DownloadJar extends HttpServlet {
+
+	
+}

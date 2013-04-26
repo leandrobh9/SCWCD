@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+
+	<servlet>
+		<servlet-name>ServletPrincipal</servlet-name>
+		<servlet-class>main.Principal</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletPrincipal</servlet-name>
+		<url-pattern>/principal.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PrimeiraServlet</servlet-name>
+		<servlet-class>cap4.Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrimeiraServlet</servlet-name>
+		<url-pattern>/primeira.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletParametros</servlet-name>
+		<servlet-class>main.ServletParametros</servlet-class>
+		
+		<init-param>
+			<param-name>nome</param-name>
+			<param-value>Leandro</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletParametros</servlet-name>
+		<url-pattern>/parametros.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletRequestDispatcher</servlet-name>
+		<servlet-class>main.UsandoRequest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletRequestDispatcher</servlet-name>
+		<url-pattern>/requestdispatcher.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletEncaminhada</servlet-name>
+		<servlet-class>main.ServletEncaminhada</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletEncaminhada</servlet-name>
+		<url-pattern>/outraurl.do</url-pattern>
+	</servlet-mapping>
+	
+	<context-param>
+		<param-name>cor</param-name>
+		<param-value>amarelo</param-value>
+	</context-param>
+</web-app>
+

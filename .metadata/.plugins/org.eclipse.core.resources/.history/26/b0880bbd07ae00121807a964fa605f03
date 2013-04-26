@@ -1,0 +1,16 @@
+package cap4;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+
+public class Servlet extends HttpServlet {
+
+	public Servlet() {
+		System.out.println("construtor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("metodo init");
+	}
+}
