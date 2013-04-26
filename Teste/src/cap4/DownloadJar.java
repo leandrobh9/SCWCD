@@ -21,23 +21,20 @@ public class DownloadJar extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		System.out.println("teste");
-		System.out.println("teste1");
-		
 		try{
-//			resp.setContentType("application/jar");
-//			ServletContext sc = getServletContext();
-//			InputStream is = sc.getResourceAsStream("ProjetoServlet/ojdbc6.jar");
-//
-//			OutputStream os = resp.getOutputStream();
-//			byte[] bytes = new byte[1024];
-//			int read = 0;
-//
-//			while ( (read = is.read(bytes)) != -1 ){
-//				os.write(bytes, 0, read);
-//			}
-//			os.flush();
-//			os.close();
+			resp.setContentType("application/jar");
+			ServletContext sc = getServletContext();
+			InputStream is = sc.getResourceAsStream("ojdbc6.jar");
+
+			OutputStream os = resp.getOutputStream();
+			byte[] bytes = new byte[1024];
+			int read = 0;
+
+			while ( (read = is.read(bytes)) != -1 ){
+				os.write(bytes, 0, read);
+			}
+			os.flush();
+			os.close();
 		}
 		catch (Exception e){
 			e.printStackTrace();

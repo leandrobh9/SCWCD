@@ -1,9 +1,0 @@
-package cap4;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-public class DownloadJar extends HttpServlet {
-
-	
-}

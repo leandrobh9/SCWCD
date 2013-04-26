@@ -1,3 +1,0 @@
-INDEX VERSION 1.126
-D:\TI\Java\Projetos\GitHub\SCWCD\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3952345850.index
-\ProjetoServlet\src
