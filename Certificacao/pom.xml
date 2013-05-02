@@ -24,6 +24,8 @@
 				<configuration>
 					<webXml>src\WEB-INF\web.xml</webXml>
 					<outputDirectory>D:\TI\Java\Servers\apache-tomcat-7.0.27\webapps</outputDirectory>
+					<warName>ProjetoCertificacao</warName>
+					
 				</configuration>
 			</plugin>
 
@@ -31,9 +33,9 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>tomcat</groupId>
-			<artifactId>servlet</artifactId>
-			<version>4.1.36</version>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>3.0-alpha-1</version>
 		</dependency>
 	</dependencies>
 </project>

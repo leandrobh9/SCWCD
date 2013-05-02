@@ -1,4 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- CAPITULO 4 -->
+	
+	<servlet>
+		<servlet-name>DownloadJAR</servlet-name>
+		<servlet-class>cap4.DownloadJar</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DownloadJAR</servlet-name>
+		<url-pattern>/meu.jar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SendRedirect</servlet-name>
+		<servlet-class>cap4.SendRedirect</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SendRedirect</servlet-name>
+		<url-pattern>/redirect.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RespostaSendRedirect</servlet-name>
+		<servlet-class>cap4.RespostaSendRedirect</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RespostaSendRedirect</servlet-name>
+		<url-pattern>/respostaRedirect.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- CAPITULO 5 -->
+	
+	<servlet>
+		<servlet-name>Parametros</servlet-name>
+		<servlet-class>cap5.Parametros</servlet-class>
+		
+		<init-param>
+			<param-name>nome</param-name>
+			<param-value>Leandro</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Parametros</servlet-name>
+		<url-pattern>/parametros.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TestListenerContext</servlet-name>
+		<servlet-class>cap5.listener.TestListenerContext</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestListenerContext</servlet-name>
+		<url-pattern>/testListenerContext.do</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- CAPITULO 6 -->
+	<servlet>
+		<servlet-name>TesteSession</servlet-name>
+		<servlet-class>cap6.TesteSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TesteSession</servlet-name>
+		<url-pattern>/session.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RecebeSolicitacaoSession</servlet-name>
+		<servlet-class>cap6.RecebeSolicitacaoSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecebeSolicitacaoSession</servlet-name>
+		<url-pattern>/recebeSolicitacaoSession.do</url-pattern>
+	</servlet-mapping>
+<!-- 
+	<servlet>
+		<servlet-name>RequestDispatcher</servlet-name>
+		<servlet-class>cap5.RequestDispatcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletRequestDispatcher</servlet-name>
+		<url-pattern>/requestdispatcher.do</url-pattern>
+	</servlet-mapping>
+ -->
+	
+	<!-- context-param - Parametros de Contexto -->
+	<context-param>
+		<param-name>cor</param-name>
+		<param-value>amarelo</param-value>
+	</context-param>
+	
+	<!-- listener -->
+	<listener>
+		<listener-class>cap5.listener.ServletContextListenerImpl</listener-class>
+	</listener>
 </web-app>
 
