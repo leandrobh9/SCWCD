@@ -1,4 +1,4 @@
-package cap4;
+package cap5;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -29,7 +29,8 @@ public class DownloadJar extends HttpServlet {
 
 			/*
 			 * Adding and Filtering External Web Resources
-			 * The default resource directory for all Maven projects is src/main/resources which will end up in target/classes and in WEB-INF/classes in the WAR. The directory structure will be preserved in the process.
+			 * The default resource directory for all Maven projects is src/main/resources which will end up in target/classes and in WEB-INF/classes in the WAR. 
+			 * The directory structure will be preserved in the process.
 			 * The WAR Plugin is also capable of including resources not found in the default resource directory through the webResources parameter.
 			 *  
 			 */
@@ -47,6 +48,7 @@ public class DownloadJar extends HttpServlet {
 			while ( (read = is.read(bytes)) != -1 ){
 				os.write(bytes, 0, read);
 			}
+			
 			os.flush();
 			os.close();
 		}
