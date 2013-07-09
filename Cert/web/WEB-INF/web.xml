@@ -25,5 +25,9 @@
 		<url-pattern>/ServletCap8.do</url-pattern>
 	</servlet-mapping>
 
+	<context-param>
+		<param-name>veiculo</param-name>
+		<param-value>uno</param-value>
+	</context-param>
 
 </web-app>
