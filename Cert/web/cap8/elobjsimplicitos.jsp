@@ -8,6 +8,8 @@
 	</head>
 <body>
 
+	<h1>EL e Objetos Implicitos em JSPs</h1>
+
 	<h4>Cookie via EL: \${cookie.nome.value}</h4>
 	<p>Nome: ${cookie.nome.value}</p>
 
@@ -17,7 +19,7 @@
 
 	<h4>Parâmetro (param) via EL \${param} e \${param.teste} (coloque
 		?teste= na URL)</h4>
-	<p>Param: ${param}</p>
+	<p>Param: ${param.teste}</p>
 	<h4>Parâmetro (paramValues) via EL \${paramValues['teste'][0]} -
 		lembrar do caso de enviar mais um parâmetro com o mesmo nome</h4>
 	<p>Param: ${paramValues['teste'][0]}</p>

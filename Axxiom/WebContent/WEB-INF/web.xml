@@ -19,4 +19,15 @@
   	<servlet-name>Principal</servlet-name>
   	<url-pattern>/Principal</url-pattern>
   </servlet-mapping>
+  
+  
+    <servlet>
+  	<servlet-name>FatorValorController</servlet-name>
+  	<servlet-class>com.servlet.FatorValorController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>FatorValorController</servlet-name>
+  	<url-pattern>/FatorValorController</url-pattern>
+  </servlet-mapping>
 </web-app>

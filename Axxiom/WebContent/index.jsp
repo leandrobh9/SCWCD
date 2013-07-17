@@ -64,9 +64,11 @@ function chamadaJSON(){
 			var objs = $.parseJSON(e);
 			
 			$.each(objs, function(){
+				var idInput = "I" + this['id'];
 				var linha = "<tr>" + 
 				"<td>" + this['id'] + "</td>" + 
-				"<td>" + this['nome'] + "</td>" + 
+				"<td>" + this['nome'] + "</td>" +
+				"<td>" + "<input id='" + idInput  + "' type='text' /></td>" + 
 				"</tr>";
 				$('#tabela').append(linha);
 			});
@@ -89,7 +91,7 @@ function chamadaJSON(){
 </head>
 <body>
 <c:out value="Teste1"></c:out>
-<input type='submit' value='enviar' onclick='chamadaJSON(); return false;' />
+<input type='submit' value='enviar' onclick='chamadaAjax(); return false;' />
 <table id="tabela"></table>
 </body>
 </html>
