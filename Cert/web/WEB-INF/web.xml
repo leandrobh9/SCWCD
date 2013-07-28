@@ -43,6 +43,14 @@
 		<url-pattern>/respostaRedirect.do</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>AlteraUri</servlet-name>
+		<servlet-class>cap4.AlteraUri</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AlteraUri</servlet-name>
+		<url-pattern>/AlteraUri</url-pattern>
+	</servlet-mapping>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
